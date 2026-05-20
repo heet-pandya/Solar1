@@ -725,8 +725,11 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Falcon Energy Solution. All rights reserved.</p>
+          <div className="footer-bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.4rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem', marginTop: '2rem' }}>
+            <p style={{ margin: 0, opacity: 0.8 }}>&copy; {new Date().getFullYear()} Falcon Energy Solution. All rights reserved.</p>
+            <p style={{ margin: 0, fontSize: '0.85rem', opacity: 0.65 }}>
+              Crafted with precision by <span style={{ color: '#00a8ff', fontWeight: '600' }}>Dcrypt Code Agency</span>
+            </p>
           </div>
         </div>
       </footer>
