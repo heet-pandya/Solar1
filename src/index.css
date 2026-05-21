@@ -33,6 +33,19 @@ body {
   overflow-x: hidden;
 }
 
+/* Prevent any horizontal overflow globally */
+html, body, #root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make media elements responsive to avoid accidental overflow */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 h1,
 h2,
 h3,
@@ -980,6 +993,15 @@ button {
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 1100;
+  }
+
+  /* Ensure hero video stays inside viewport on small screens */
+  .hero-video {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
   }
 
   .nav-links.active {
