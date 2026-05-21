@@ -61,6 +61,7 @@ function Home() {
   const [bill, setBill] = useState(5000);
   const [openFaq, setOpenFaq] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const [quoteName, setQuoteName] = useState('');
   const [quotePhone, setQuotePhone] = useState('');
@@ -177,14 +178,19 @@ function Home() {
           <div className="logo">
             <img src="/FACLON ENERGY LOGO.png" alt="Falcon Energy Logo" style={{ height: '120px', objectFit: 'contain', margin: '-20px 0' }} />
           </div>
-          <ul className="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#calculator">Calculator</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact" onClick={openModal} className="btn btn-primary">Get a Quote</a></li>
+          <button className={`nav-toggle ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
+          <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+            <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
+            <li><a href="#services" onClick={() => setMenuOpen(false)}>Services</a></li>
+            <li><a href="#calculator" onClick={() => setMenuOpen(false)}>Calculator</a></li>
+            <li><a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a></li>
+            <li><a href="#how-it-works" onClick={() => setMenuOpen(false)}>How It Works</a></li>
+            <li><a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a></li>
+            <li><a href="#contact" onClick={() => { openModal(); setMenuOpen(false); }} className="btn btn-primary">Get a Quote</a></li>
           </ul>
         </div>
       </nav>
