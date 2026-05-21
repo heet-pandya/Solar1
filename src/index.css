@@ -808,17 +808,48 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--white);
-  color: #001f3f; /* Deep footer navy background */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.social-icon:hover {
+/* Facebook - White background, navy icon. Hover sky-blue background/glow, white icon. */
+.social-icon.facebook {
+  background: var(--white);
+  color: #001f3f;
+}
+
+.social-icon.facebook:hover {
   transform: scale(1.15) translateY(-3px);
   background: var(--accent-color);
   color: var(--white);
   box-shadow: 0 8px 20px rgba(0, 168, 255, 0.4);
+}
+
+/* Instagram - Beautiful official gradient theme, white icon. Brightness & purple/pink glow on hover. */
+.social-icon.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285ae5 90%);
+  color: var(--white);
+}
+
+.social-icon.instagram:hover {
+  transform: scale(1.15) translateY(-3px);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285ae5 90%);
+  filter: brightness(1.12);
+  color: var(--white);
+  box-shadow: 0 8px 25px rgba(214, 36, 159, 0.6);
+}
+
+/* WhatsApp - Official green background, white icon. Slightly darker green background & green glow on hover. */
+.social-icon.whatsapp {
+  background: #25D366;
+  color: var(--white);
+}
+
+.social-icon.whatsapp:hover {
+  transform: scale(1.15) translateY(-3px);
+  background: #20ba5a;
+  color: var(--white);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
 }
 
 
@@ -1076,6 +1107,11 @@ button {
 
 .fab-whatsapp {
   background: #25D366;
+}
+
+.fab-whatsapp:hover {
+  background: #20ba5a;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
 }
 
 .fab-phone {
