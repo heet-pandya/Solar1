@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, useSearchParams, Link } from 'react-router-dom';
-import { Sun, Battery, Leaf, Shield, Zap, ArrowRight, IndianRupee, Send, CheckCircle2, Quote, ChevronDown, ChevronUp, ArrowLeft, BarChart3, TreePine, Award, TrendingUp, Phone, MessageSquare, Printer, Share2, MapPin, Mail, PhoneCall, ExternalLink, Download } from 'lucide-react';
+import { Sun, Battery, Leaf, Shield, Zap, ArrowRight, IndianRupee, Send, CheckCircle2, Quote, ChevronDown, ChevronUp, ArrowLeft, BarChart3, TreePine, Award, TrendingUp, Phone, MessageSquare, Printer, Share2, MapPin, Mail, PhoneCall, ExternalLink, Download, Facebook, Instagram } from 'lucide-react';
 import './App.css'; // empty
 import { supabase } from './supabaseClient';
 import * as XLSX from 'xlsx';
@@ -725,7 +725,27 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="footer-bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.4rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem', marginTop: '2rem' }}>
+          <div className="footer-bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.6rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem', marginTop: '2rem' }}>
+            <div className="social-icons-container">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61589983001673" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="social-icon"
+              >
+                <Facebook size={20} fill="currentColor" />
+              </a>
+              <a 
+                href="https://www.instagram.com/falconenergysolution?igsh=MWtpdmJzMDU3c3gzMQ==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="social-icon"
+              >
+                <Instagram size={20} />
+              </a>
+            </div>
             <p style={{ margin: 0, opacity: 0.8 }}>&copy; {new Date().getFullYear()} Falcon Energy Solution. All rights reserved.</p>
             <p style={{ margin: 0, fontSize: '0.85rem', opacity: 0.65 }}>
               Crafted with precision by <span style={{ color: '#00a8ff', fontWeight: '600' }}>Dcrypt Code</span>

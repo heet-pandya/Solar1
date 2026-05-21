@@ -794,6 +794,34 @@ button {
   font-size: 0.9rem;
 }
 
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--white);
+  color: #001f3f; /* Deep footer navy background */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon:hover {
+  transform: scale(1.15) translateY(-3px);
+  background: var(--accent-color);
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(0, 168, 255, 0.4);
+}
+
+
 /* Animations */
 @keyframes slideUp {
   from {
