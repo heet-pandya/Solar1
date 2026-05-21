@@ -169,11 +169,12 @@ button {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  position: relative;
 }
 
 .navbar .logo img,
 .nav-logo {
-  max-height: 56px;
+  max-height: 120px;
   width: auto;
   margin: 0;
 }
@@ -956,6 +957,11 @@ button {
     margin-left: auto;
   }
 
+  .navbar .logo img,
+  .nav-logo {
+    max-height: 56px;
+  }
+
   .nav-links {
     position: absolute;
     top: 100%;
@@ -968,6 +974,7 @@ button {
     text-align: center;
     padding: 1.5rem 0;
     border-bottom: 1px solid rgba(0,0,0,0.08);
+    left: 0;
     transform: translateY(-120%);
     visibility: hidden;
     opacity: 0;
