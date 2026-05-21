@@ -176,7 +176,7 @@ function Home() {
       <nav className="navbar">
         <div className="container">
           <div className="logo">
-            <img src="/FACLON ENERGY LOGO.png" alt="Falcon Energy Logo" style={{ height: '120px', objectFit: 'contain', margin: '-20px 0' }} />
+            <img src="/FACLON ENERGY LOGO.png" alt="Falcon Energy Logo" className="nav-logo" />
           </div>
           <button className={`nav-toggle ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
             <span className="bar"></span>
