@@ -272,11 +272,11 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: 120%;
+  transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 0;
   opacity: 0.6;
@@ -1001,11 +1001,11 @@ button {
   /* Mobile: ensure hero video remains centered and covers */
   .hero-video {
     left: 50% !important;
-    transform: translateX(-50%) !important;
+    transform: translate(-50%, -50%) !important;
     min-width: 100% !important;
     min-height: 100% !important;
     width: auto !important;
-    height: 140% !important;
+    height: auto !important;
     object-fit: cover !important;
     opacity: 0.55 !important;
   }
