@@ -1328,6 +1328,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/calculator-results" element={<Results />} />
+      <Route path="/dashboard" element={<LeadsExport />} />
       <Route path="/leads-export-fa982bc3" element={<LeadsExport />} />
     </Routes>
   );
