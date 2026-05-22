@@ -188,7 +188,7 @@ button {
 
 .navbar .logo img,
 .nav-logo {
-  max-height: 90px;
+  max-height: 100px;
   width: auto;
   margin: 0;
 }
@@ -981,7 +981,7 @@ button {
 
   .navbar .logo img,
   .nav-logo {
-    max-height: 78px;
+    max-height: 86px;
   }
 
   .nav-links {
