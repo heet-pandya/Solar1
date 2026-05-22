@@ -153,11 +153,11 @@ function Home() {
             if (currentScrollY < 60) {
               // near top: always show
               setNavHidden(false);
-            } else if (currentScrollY < lastScrollY) {
-              // scrolled up -> hide (as requested)
-              setNavHidden(true);
             } else if (currentScrollY > lastScrollY) {
-              // scrolled down -> show
+              // scrolled down -> hide navbar
+              setNavHidden(true);
+            } else if (currentScrollY < lastScrollY) {
+              // scrolled up -> show navbar
               setNavHidden(false);
             }
           }
