@@ -175,6 +175,7 @@ button {
   border-bottom: 1px solid #eaeaea;
   z-index: 1000;
   box-shadow: var(--glass-shadow);
+  transition: transform 0.25s ease;
 }
 
 .navbar .container {
@@ -204,6 +205,11 @@ button {
 
 .logo-icon {
   color: var(--accent-color);
+}
+
+/* Hidden state for navbar (slides up out of view) */
+.navbar--hidden {
+  transform: translateY(-110%);
 }
 
 .nav-links {

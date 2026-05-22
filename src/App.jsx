@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+ import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, useSearchParams, Link } from 'react-router-dom';
 import { Sun, Battery, Leaf, Shield, Zap, ArrowRight, IndianRupee, Send, CheckCircle2, Quote, ChevronDown, ChevronUp, ArrowLeft, BarChart3, TreePine, Award, TrendingUp, Phone, MessageSquare, Printer, Share2, MapPin, Mail, PhoneCall, ExternalLink, Download } from 'lucide-react';
 import './App.css'; // empty
@@ -62,6 +62,7 @@ function Home() {
   const [openFaq, setOpenFaq] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navHidden, setNavHidden] = useState(false);
 
   const [quoteName, setQuoteName] = useState('');
   const [quotePhone, setQuotePhone] = useState('');
@@ -136,6 +137,42 @@ function Home() {
     return () => observer.disconnect();
   }, []);
 
+  // Hide/show navbar based on scroll direction
+  useEffect(() => {
+    let lastScrollY = window.scrollY || 0;
+    let ticking = false;
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY || 0;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // If mobile menu is open, ensure navbar stays visible
+          if (menuOpen) {
+            setNavHidden(false);
+          } else {
+            if (currentScrollY < 60) {
+              // near top: always show
+              setNavHidden(false);
+            } else if (currentScrollY < lastScrollY) {
+              // scrolled up -> hide (as requested)
+              setNavHidden(true);
+            } else if (currentScrollY > lastScrollY) {
+              // scrolled down -> show
+              setNavHidden(false);
+            }
+          }
+
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [menuOpen]);
+
   const handleCalculate = () => {
     navigate(`/calculator-results?bill=${bill}`);
   };
@@ -173,7 +210,7 @@ function Home() {
   return (
     <>
       {/* Navbar */}
-      <nav className="navbar">
+      <nav className={`navbar ${navHidden ? 'navbar--hidden' : ''}`}>
         <div className="container">
           <div className="logo">
             <img src="/FACLON ENERGY LOGO.png" alt="Falcon Energy Logo" className="nav-logo" />
