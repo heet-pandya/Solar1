@@ -2,6 +2,7 @@
 import { Routes, Route, useNavigate, useSearchParams, Link } from 'react-router-dom';
 import { Sun, Battery, Leaf, Shield, Zap, ArrowRight, IndianRupee, Send, CheckCircle2, Quote, ChevronDown, ChevronUp, ArrowLeft, BarChart3, TreePine, Award, TrendingUp, Phone, MessageSquare, Printer, Share2, MapPin, Mail, PhoneCall, ExternalLink, Download } from 'lucide-react';
 import './App.css'; // empty
+import GoogleReviews from './components/GoogleReviews';
 import { supabase } from './supabaseClient';
 import * as XLSX from 'xlsx';
 
@@ -565,6 +566,9 @@ function Home() {
           </div>
         </div>
       </section>
+
+{/* Google Reviews */}
+<GoogleReviews placeId="YOUR_GOOGLE_PLACE_ID" apiKey="YOUR_GOOGLE_API_KEY" />
 
       {/* FAQ Section */}
       <section id="faq" className="section faq-section">
