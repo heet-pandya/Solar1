@@ -568,7 +568,7 @@ function Home() {
       </section>
 
 {/* Google Reviews */}
-<GoogleReviews placeId="YOUR_GOOGLE_PLACE_ID" apiKey="YOUR_GOOGLE_API_KEY" />
+      <GoogleReviews />
 
       {/* FAQ Section */}
       <section id="faq" className="section faq-section">
