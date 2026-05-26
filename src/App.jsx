@@ -602,11 +602,17 @@ function Home() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div>
                   <h4 style={{ opacity: 0.9, fontSize: '0.9rem', fontFamily: 'Open Sans' }}>Email Us</h4>
-                  <p style={{ fontWeight: 700, fontSize: '1.1rem', fontFamily: 'Montserrat' }}>info@falconenergysolution.com</p>
+                  <p style={{ fontWeight: 700, fontSize: '1.1rem', fontFamily: 'Montserrat', wordBreak: 'break-word' }}>
+                    <a href="mailto:info@falconenergysolution.com" style={{ color: 'inherit', textDecoration: 'none' }}>info@falconenergysolution.com</a>
+                  </p>
                 </div>
                 <div>
                   <h4 style={{ opacity: 0.9, fontSize: '0.9rem', fontFamily: 'Open Sans' }}>Call Us</h4>
-                  <p style={{ fontWeight: 700, fontSize: '1.1rem', fontFamily: 'Montserrat' }}>+91-9630349148, +91 7771800880, +91 9340499254</p>
+                  <p style={{ fontWeight: 700, fontSize: '1.1rem', fontFamily: 'Montserrat', display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                    <a href="tel:+919630349148" style={{ color: 'inherit', textDecoration: 'none' }}>+91 96303 49148</a>
+                    <a href="tel:+917771800880" style={{ color: 'inherit', textDecoration: 'none' }}>+91 77718 00880</a>
+                    <a href="tel:+919340499254" style={{ color: 'inherit', textDecoration: 'none' }}>+91 93404 99254</a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -680,14 +686,20 @@ function Home() {
                   <div className="method-icon"><PhoneCall size={24} /></div>
                   <div>
                     <h4>Sales Enquiry</h4>
-                    <p>+91-9630349148, +91 7771800880, +91 9340499254</p>
+                    <p style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem', wordBreak: 'break-word' }}>
+                      <a href="tel:+919630349148" style={{ color: 'inherit', textDecoration: 'none' }}>+91 96303 49148</a>
+                      <a href="tel:+917771800880" style={{ color: 'inherit', textDecoration: 'none' }}>+91 77718 00880</a>
+                      <a href="tel:+919340499254" style={{ color: 'inherit', textDecoration: 'none' }}>+91 93404 99254</a>
+                    </p>
                   </div>
                 </div>
                 <div className="method">
                   <div className="method-icon"><Mail size={24} /></div>
                   <div>
                     <h4>Email Us</h4>
-                    <p>info@falconenergysolution.com</p>
+                    <p style={{ wordBreak: 'break-word' }}>
+                      <a href="mailto:info@falconenergysolution.com" style={{ color: 'inherit', textDecoration: 'none' }}>info@falconenergysolution.com</a>
+                    </p>
                   </div>
                 </div>
               </div>

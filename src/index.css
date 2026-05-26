@@ -1597,26 +1597,38 @@ button {
 
 /* Responsive: Timeline */
 @media (max-width: 768px) {
+  /* Container Padding Optimization */
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Installation Process Timeline Mobile Refinements */
   .timeline::before {
-    left: 24px;
+    left: 20px;
   }
 
   .timeline-item,
   .timeline-item:nth-child(odd) {
     flex-direction: column;
     text-align: left;
-    padding-left: 60px;
+    padding-left: 52px;
     gap: 1rem;
   }
 
   .timeline-dot {
     left: 0;
-    top: 0;
+    top: 4px;
     transform: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    border-width: 3px;
+    box-shadow: 0 0 0 2px var(--accent-color), 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .timeline-content {
     max-width: 100%;
+    padding: 1.5rem;
   }
 
   .timeline-item:nth-child(odd) .timeline-content {
@@ -1625,6 +1637,43 @@ button {
     border-left: 4px solid var(--primary-color);
   }
 
+  /* Contact / Lead Gen Form Spacing Optimization */
+  .contact-info {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .contact-form {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-info a {
+    transition: var(--transition);
+  }
+
+  .contact-info a:hover {
+    color: var(--accent-color) !important;
+    text-decoration: underline !important;
+  }
+
+  /* Get In Touch Contact Details Mobile Spacing */
+  .contact-card-wide {
+    padding: 2rem 1.25rem;
+  }
+
+  .contact-methods a {
+    transition: var(--transition);
+  }
+
+  .contact-methods a:hover {
+    color: var(--accent-color) !important;
+    text-decoration: underline !important;
+  }
+
+  /* ROI Milestone Timeline */
   .roi-timeline::before {
     left: 50px;
   }
