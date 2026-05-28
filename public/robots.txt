@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /leads-export-fa982bc3
+
+Sitemap: https://falconenergysolution.com/sitemap.xml
