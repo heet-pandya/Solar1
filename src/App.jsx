@@ -730,6 +730,7 @@ function Home() {
                 <span>Bhopal</span>
                 <span>Indore</span>
                 <span>Gwalior</span>
+                <span>Jabalpur</span>
                 <span>All over Madhya Pradesh</span>
               </div>
               <div style={{ marginTop: '2rem', padding: '1rem', background: 'rgba(0,168,255,0.05)', borderRadius: '8px', border: '1px dashed var(--accent-color)' }}>
@@ -839,7 +840,7 @@ function Home() {
                 We proudly deliver custom solar energy solutions across Madhya Pradesh.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                {['Gwalior', 'Dabra', 'Datia', 'Bhind', 'Guna', 'Shivpuri', 'Morena'].map((loc, i) => (
+                {['Bhopal', 'Indore', 'Gwalior', 'Jabalpur', 'All over Madhya Pradesh'].map((loc, i) => (
                   <span key={i} style={{ fontSize: '0.75rem', padding: '0.3rem 0.6rem', background: 'rgba(255,255,255,0.1)', borderRadius: '12px', color: '#fff', whiteSpace: 'nowrap', border: '1px solid rgba(255,255,255,0.1)' }}>
                     {loc}
                   </span>
