@@ -333,7 +333,7 @@ function Home() {
                 <h3>Residential Solar Systems</h3>
                 <p>Complete rooftop installations tailored to power your home efficiently.</p>
                 <ul>
-                  <li><CheckCircle2 size={16} color="var(--accent-color)" /> Tier-1 Monocrystalline Panels</li>
+                  <li><CheckCircle2 size={16} color="var(--accent-color)" /> Latest Technology Solar Panels</li>
                   <li><CheckCircle2 size={16} color="var(--accent-color)" /> Smart Inverter Technology</li>
                   <li><CheckCircle2 size={16} color="var(--accent-color)" /> Net-Metering Support</li>
                 </ul>
