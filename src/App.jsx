@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate, useSearchParams, Link } from 'react-router-
 import { Sun, Battery, Leaf, Shield, Zap, ArrowRight, IndianRupee, Send, CheckCircle2, Quote, ChevronDown, ChevronUp, ArrowLeft, BarChart3, TreePine, Award, TrendingUp, Phone, MessageSquare, Printer, Share2, MapPin, Mail, PhoneCall, ExternalLink, Download } from 'lucide-react';
 import './App.css'; // empty
 import GoogleReviews from './components/GoogleReviews';
+import AIChatbot from './components/AIChatbot';
 import { supabase } from './supabaseClient';
 import * as XLSX from 'xlsx';
 
@@ -409,6 +410,20 @@ function Home() {
           </div>
 
           <div className="calc-card">
+            <div className="calc-group" style={{ marginBottom: '1.5rem' }}>
+              <label>Property Address (For Satellite Roof Analysis)</label>
+              <div className="input-wrapper">
+                <span className="input-icon"><MapPin size={18} style={{marginLeft: '-8px'}}/></span>
+                <input
+                  type="text"
+                  className="calc-input"
+                  placeholder="Enter your street address..."
+                  style={{ fontSize: '1rem', paddingLeft: '2.5rem' }}
+                />
+              </div>
+              <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem', marginBottom: '0' }}>Powered by Google Solar API</p>
+            </div>
+
             <div className="calc-group">
               <label>Average Monthly Electric Bill</label>
               <div className="input-wrapper">
@@ -1381,12 +1396,16 @@ function LeadsExport() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/calculator-results" element={<Results />} />
-      <Route path="/dashboard" element={<LeadsExport />} />
-      <Route path="/leads-export-fa982bc3" element={<LeadsExport />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/calculator-results" element={<Results />} />
+        <Route path="/dashboard" element={<LeadsExport />} />
+        <Route path="/leads-export-fa982bc3" element={<LeadsExport />} />
+      </Routes>
+      {/* AI Chatbot */}
+      <AIChatbot />
+    </>
   );
 }
 
