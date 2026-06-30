@@ -712,13 +712,10 @@ function Home() {
               <h3>Service Locations</h3>
               <p>We provide end-to-end solar solutions in the following regions:</p>
               <div className="location-tags">
+                <span>Bhopal</span>
+                <span>Indore</span>
                 <span>Gwalior</span>
-                <span>Dabra</span>
-                <span>Datia</span>
-                <span>Bhind</span>
-                <span>Guna</span>
-                <span>Shivpuri</span>
-                <span>Morena</span>
+                <span>All over Madhya Pradesh</span>
               </div>
               <div style={{ marginTop: '2rem', padding: '1rem', background: 'rgba(0,168,255,0.05)', borderRadius: '8px', border: '1px dashed var(--accent-color)' }}>
                 <p style={{ fontSize: '0.9rem', color: 'var(--primary-color)', fontWeight: '600' }}>
